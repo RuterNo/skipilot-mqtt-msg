@@ -1,0 +1,48 @@
+{
+  "$id": "https://schemas.ruter.no/tp/api/skipilot/mqtt-msg/v2.0/vehicle-schedule/mission.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Mission",
+  "type": "object",
+  "allOf": [{ "$ref": "vehicle-activity.json" }],
+  "required": [
+    "stops",
+    "reason"
+  ],
+  "description": "Mission is bound to the vehicle it self. This is what the vehicles are instructed to do next",
+  "additionalProperties": false,
+  "properties": {
+    "stops": {
+      "$id": "#/properties/stops",
+      "type": "array",
+      "description": "List of stops the vehicle should stop at or drive through",
+      "items": {
+        "type": "object",
+        "properties": {
+          "usageType": {
+            "$id": "#/properties/usageType",
+            "type": "string",
+            "description": "Type of action the vehicle is instructed to do [stopCompletely, driveThrough]"
+          },
+          "stopId": {
+            "$id": "#/properties/stopId",
+            "type": "string",
+            "description": "Station id, at which the vehicle is suppose to perform the command(usageType) "
+          }
+        }
+      }
+    },
+    "$id": "#/properties/reason",
+    "type": "string",
+    "description": "Reason for status change, specially if status is interrupted or rejected"
+  },
+  "examples": [
+    {
+      "type": "mission",
+      "status": "PENDING",
+      "datetime": "2021-05-19T12:45:50Z",
+      "traceId": "addf-df123456",
+      "stops": [{"usageType":"stopCompletely", "stopId":"Stop1"}, {"usageType":"driveThrough", "stopId":"Stop2"}],
+      "reason": ""
+    }
+  ]
+}

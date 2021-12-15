@@ -1,0 +1,29 @@
+{
+  "$id": "https://schemas.ruter.no/tp/api/skipilot/mqtt-msg/v1.0/vehicle-schedule/pickup.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "pickup",
+  "type": "object",
+  "allOf": [{ "$ref": "vehicle-activity.json" }],
+  "required": [
+    "bookingRef"
+  ],
+  "description": "Pickup is related to the passenger and the station he/she is suppose to be picked up",
+  "additionalProperties": false,
+  "properties": {
+    "bookingRef": {
+      "$id": "#/properties/bookingRef",
+      "type": "string",
+      "description": "Alphanumeric reference to the booking for which the pickup is created"
+    }
+  },
+  "examples": [
+    {
+      "id": "pickup12333",
+      "type": "pickup",
+      "status": "PLANNED",
+      "datetime": "2021-05-19T12:45:50Z",
+      "traceId": "addf-df123456",
+      "bookingRef": "book-efe-233"
+    }
+  ]
+}

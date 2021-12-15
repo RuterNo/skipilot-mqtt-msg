@@ -1,0 +1,29 @@
+{
+  "$id": "https://schemas.ruter.no/tp/api/skipilot/mqtt-msg/v1.0/vehicle-schedule/dropoff.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "dropoff",
+  "type": "object",
+  "allOf": [{ "$ref": "vehicle-activity.json" }],
+  "required": [
+    "bookingRef"
+  ],
+  "description": "Dropoff is related to the passenger and the station he/she is suppose to be dropped off",
+  "additionalProperties": false,
+  "properties": {
+    "bookingRef": {
+      "$id": "#/properties/bookingRef",
+      "type": "string",
+      "description": "Alphanumeric reference to the booking for which the dropoff is created"
+    }
+  },
+  "examples": [
+    {
+      "id": "dropoff123234",
+      "type": "dropoff",
+      "status": "PLANNED",
+      "datetime": "2021-05-19T12:45:50Z",
+      "traceId": "addf-df123456",
+      "bookingRef": "book-efe-233"
+    }
+  ]
+}
