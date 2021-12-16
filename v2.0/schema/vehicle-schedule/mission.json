@@ -3,7 +3,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Mission",
   "type": "object",
-  "allOf": [{ "$ref": "file:./vehicle-activity.json" }],
+  "allOf": [{ "$ref": "https://schemas.ruter.no/tp/api/skipilot/mqtt-msg/v2.0/vehicle-schedule/vehicle-activity.json" }],
   "required": [
     "stops",
     "reason"
