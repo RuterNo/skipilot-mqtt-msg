@@ -4,19 +4,7 @@
   "title": "Mission",
   "type": "object",
   "allOf": [{
-    "$id": "https://schemas.ruter.no/tp/api/skipilot/mqtt-msg/v2.0/vehicle-schedule/vehicle-activity.json",
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "VehicleActivity",
     "type": "object",
-    "required": [
-      "id",
-      "type",
-      "status",
-      "datetime",
-      "traceId"
-    ],
-    "description": "Activity is superclass for mission, pickup, dropoff, etc that a vehicle performs as an item in its schedule",
-    "additionalProperties": false,
     "properties": {
       "id": {
         "$id": "#/properties/id",
