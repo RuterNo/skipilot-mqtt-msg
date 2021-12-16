@@ -36,7 +36,7 @@
     "events": {
       "$id": "#/properties/events",
       "type": "array",
-      "$ref": "/event",
+      "$ref": "/tp/api/skipilot/mqtt-msg/v2.0/vehicle-schedule/event.json",
       "items": {
         "type": "Event"
       },
