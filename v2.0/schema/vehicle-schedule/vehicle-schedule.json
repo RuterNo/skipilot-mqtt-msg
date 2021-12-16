@@ -36,7 +36,7 @@
     "events": {
       "$id": "#/properties/events",
       "type": "array",
-      "$ref": "/v2.0/schema/vehicle-schedule/event.json",
+      "$ref": "/RuterNo/skipilot-mqtt-msg/master/v2.0/schema/vehicle-schedule/event.json",
       "items": {
         "type": "Event"
       },
