@@ -36,9 +36,9 @@
     "events": {
       "$id": "#/properties/events",
       "type": "array",
-      "$ref": "./event.json",
       "items": {
-        "type": "Event"
+        "type": "Event",
+        "$ref": "event.json"
       },
       "description": "List of events"
     }
