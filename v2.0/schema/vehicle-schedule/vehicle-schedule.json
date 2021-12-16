@@ -36,7 +36,7 @@
     "events": {
       "$id": "#/properties/events",
       "type": "array",
-      "$ref": "https://raw.githubusercontent.com/RuterNo/skipilot-mqtt-msg/master/v2.0/schema/vehicle-schedule/event.json",
+      "$ref": "./event.json",
       "items": {
         "type": "Event"
       },
