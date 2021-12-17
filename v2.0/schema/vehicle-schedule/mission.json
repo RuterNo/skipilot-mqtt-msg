@@ -3,7 +3,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Mission",
   "type": "object",
-  "allOf": [{ "$ref": "https://raw.githubusercontent.com/RuterNo/skipilot-mqtt-msg/master/v2.0/schema/vehicle-schedule/vehicle-activity.json" }],
   "required": ["stops"],
   "description": "Mission is bound to the vehicle it self. This is what the vehicles are instructed to do next",
   "additionalProperties": false,
