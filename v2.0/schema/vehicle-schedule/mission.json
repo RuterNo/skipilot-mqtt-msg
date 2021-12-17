@@ -30,10 +30,7 @@
           }
         }
       }
-    },
-    "$id": "#/properties/reason",
-    "type": "string",
-    "description": "Reason for status change, specially if status is interrupted or rejected"
+    }
   },
   "examples": [
     {
