@@ -3,7 +3,10 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Mission",
   "type": "object",
-  "required": ["stops"],
+  "required": [
+    "stops",
+    "reason"
+  ],
   "description": "Mission is bound to the vehicle it self. This is what the vehicles are instructed to do next",
   "additionalProperties": false,
   "properties": {
@@ -26,6 +29,19 @@
           }
         }
       }
+    },
+    "$id": "#/properties/reason",
+    "type": "string",
+    "description": "Reason for status change, specially if status is interrupted or rejected"
+  },
+  "examples": [
+    {
+      "type": "mission",
+      "status": "PENDING",
+      "datetime": "2021-05-19T12:45:50Z",
+      "traceId": "addf-df123456",
+      "stops": [{"usageType":"stopCompletely", "stopId":"Stop1"}, {"usageType":"driveThrough", "stopId":"Stop2"}],
+      "reason": ""
     }
-  }
+  ]
 }
