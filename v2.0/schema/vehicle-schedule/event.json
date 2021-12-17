@@ -7,10 +7,6 @@
   "description": "Event represents actions (act_pullout, act_pickup, act_dropoff, act_pullin) as defined in Trapeze booking system (Trapeze Wecore)",
   "additionalProperties": false,
   "properties": {
-    "id": {
-      "$id": "#/properties/id",
-      "type": "number",
-      "description": "Event id"
-    }
+    "id": { "type" : "number"}
   }
 }
