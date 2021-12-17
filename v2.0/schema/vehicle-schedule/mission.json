@@ -3,10 +3,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Mission",
   "type": "object",
-  "required": [
-    "stops",
-    "reason"
-  ],
+  "allOf": [{ "$ref": "https://raw.githubusercontent.com/RuterNo/skipilot-mqtt-msg/master/v2.0/schema/vehicle-schedule/vehicle-activity.json" }],
+  "required": ["stops", "reason"],
   "description": "Mission is bound to the vehicle it self. This is what the vehicles are instructed to do next",
   "additionalProperties": false,
   "properties": {
@@ -30,9 +28,11 @@
         }
       }
     },
-    "$id": "#/properties/reason",
-    "type": "string",
-    "description": "Reason for status change, specially if status is interrupted or rejected"
+    "reason": {
+      "$id": "#/properties/reason",
+      "type": "string",
+      "description": "Reason for status change, specially if status is interrupted or rejected"
+    }
   },
   "examples": [
     {
