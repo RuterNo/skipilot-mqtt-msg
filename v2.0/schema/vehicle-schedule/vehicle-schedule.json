@@ -38,9 +38,9 @@
       "type": "array",
       "items": {
         "allOf": [{ "$ref": "https://raw.githubusercontent.com/RuterNo/skipilot-mqtt-msg/master/v2.0/schema/vehicle-schedule/event.json" }]
-        }
       },
       "description": "List of events"
+    }
   },
   "examples": [
     {
