@@ -4,10 +4,7 @@
   "title": "Mission",
   "type": "object",
   "allOf": [{ "$ref": "https://raw.githubusercontent.com/RuterNo/skipilot-mqtt-msg/master/v2.0/schema/vehicle-schedule/vehicle-activity.json" }],
-  "required": [
-    "stops",
-    "reason"
-  ],
+  "required": ["stops"],
   "description": "Mission is bound to the vehicle it self. This is what the vehicles are instructed to do next",
   "additionalProperties": false,
   "properties": {
@@ -31,15 +28,5 @@
         }
       }
     }
-  },
-  "examples": [
-    {
-      "type": "mission",
-      "status": "PENDING",
-      "datetime": "2021-05-19T12:45:50Z",
-      "traceId": "addf-df123456",
-      "stops": [{"usageType":"stopCompletely", "stopId":"Stop1"}, {"usageType":"driveThrough", "stopId":"Stop2"}],
-      "reason": ""
-    }
-  ]
+  }
 }
